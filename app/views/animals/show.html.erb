@@ -1,0 +1,14 @@
+<h1>Information about a Specific Animal</h1>
+
+<h2><%= @animals.name %> <%= image_tag(@animals.photo) %> 
+
+<% if @animals.zoo %>
+<%= @animals.zoo.name %></h2>
+<% end %>
+
+<br>
+<%= link_to('Delete Animal', animal_path, :method => :delete, :confirm => 'Are you sure?') %>
+<br>
+<br>
+
+<%= link_to('Edit Animal', edit_animal_path, :method => :get, :confirm => 'Are you sure?') %>

@@ -1,0 +1,11 @@
+<h1>Zoo Index</h1>
+
+<ul class="nav nav-pills">
+  <%= link_to('New Zoo', zoos_create_new_path) %>
+</ul>
+
+<ul>
+<% @zoos.each do |zoo| %>
+<li><%= link_to("#{zoo.name}, #{zoo.location}", zoo) %></li>
+<% end %>
+</ul>

@@ -1,0 +1,19 @@
+<h1>Animal Index</h1>
+
+<ul class="nav nav-pills">
+  <%= link_to('New Animal', animals_create_new_path) %>
+</ul>
+
+<ul>
+<% @animals.each do |animal| %>
+<li><%= link_to("#{animal.name}", animal) %>
+<br>
+<%= image_tag(animal.photo, size:"300x200") %> 
+<% if animal.zoo %>
+  <%= animal.zoo.name %>
+<% end %>
+</li>
+<% end %>
+</ul>
+
+

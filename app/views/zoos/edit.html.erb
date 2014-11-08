@@ -1,0 +1,20 @@
+<h1>Editing Zoo</h1>
+
+<%= form_for @zoo do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @zoo %> |
+<%= link_to 'Back', zoos_path %>

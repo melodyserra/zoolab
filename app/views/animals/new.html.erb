@@ -1,0 +1,20 @@
+<%= form_for @animal do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :image_tag, "Image URL" %><br>
+    <%= f.text_field :photo %>
+  </p>
+
+  <p>
+    <%= f.label :zoo_id, "Zoo" %><br>
+    <%= f.text_field :zoo_id %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>

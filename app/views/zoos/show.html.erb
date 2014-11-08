@@ -1,0 +1,10 @@
+<h1>Information about a Specific Zoo</h1>
+
+
+<h2><%= @zoos.name %>, <%= @zoos.location %></h2>
+<br>
+<%= link_to('Delete Zoo', zoo_path, :method => :delete, :confirm => 'Are you sure?') %>
+<br>
+<br>
+
+<%= link_to('Edit Zoo', edit_zoo_path, :method => :get, :confirm => 'Are you sure?') %>

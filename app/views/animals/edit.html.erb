@@ -1,0 +1,20 @@
+<h1>Editing Animal</h1>
+
+<%= form_for @animal do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :image_tag, "Image URL" %><br>
+    <%= f.text_field :photo %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @animal %> |
+<%= link_to 'Back', animals_path %>
